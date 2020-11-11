@@ -5,16 +5,29 @@ function changeBelow(tt){
 
 }
 
-function theChange({props}){
+function theChange({props,target}){
+    try{
      let testo=target.value.match(/.{1,1}/g); 
-    setTimeout(changeBelow(target),1200);
-     
+     testo= testo.join(' ');
+     testo = testo.toUpperCase();
+//    setTimeout(changeBelow(target),1200);
+     console.log(testo);
+     console.log(
+        document.querySelector('TextFieldC'));
+    }catch(e){
+        console.log(
+            document.querySelector('body '));
+    }
 }
 
-export default 
-function TextFieldC(props){
+export default React.forwardRef(
+function TextFieldC(props,ref){
 
-    const entrad = useRef(null);
+    const dentroA=()=>{
+        return 23;
+    }
+
+    
 
     return(
         <TextField
@@ -23,8 +36,9 @@ function TextFieldC(props){
           color="secondary"          
           autoFocus={true}
           placeholder="Digite"
-          ref={entrad}
+          forwardRef={ref}
           margin="normal"
+          {...props}
           InputLabelProps={{
 
             shrink: true,
@@ -43,3 +57,4 @@ function TextFieldC(props){
         />
     );
 }
+)
