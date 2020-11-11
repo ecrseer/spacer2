@@ -7,9 +7,11 @@
     "build": "next build",
     "start": "next start",
     "export": "next export",
-    "deploy": "rm -rf node_modules/.cache && rimraf out && next build && next export && touch out/.nojekyll && gh-pages -d out -t true"
+    "rimra": "rimraf out",
+    "deploy": "rm -rf node_modules/.cache && rm -rf node_modules/gh-pages/.cache &&npm run rimra && next build && next export && touch out/.nojekyll && gh-pages -d out -t true"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
     "next": "latest",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
