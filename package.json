@@ -8,6 +8,7 @@
     "start": "next start",
     "export": "next export",
     "rimra": "rimraf out",
+    "backToLastCommit":"git reset --hard && git clean --force -d",
     "test": "jest",
     "deploy": "rm -rf node_modules/.cache && rm -rf node_modules/gh-pages/.cache &&npm run rimra && next build && next export && touch out/.nojekyll && gh-pages -d out -t true"
   },
