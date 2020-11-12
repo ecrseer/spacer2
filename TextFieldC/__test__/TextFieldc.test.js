@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom';
 import TextFieldC from '../TextFieldC';
 import {isTSAnyKeyword} from '@babel/types';
 import {render as renderer} from '@testing-library/react';
+import SimplestMe from '../SimpleF';
 
 it('render',()=>{
     let br = document.createElement('br');
@@ -17,9 +18,15 @@ it('render with prop',()=>{
     
 });
 
-test('soma simples',()=>{
+/* test('soma simples',()=>{
     let x =(new TextFieldC()).dentroA;
     expect(x).toBe(23);
-})
+}) */
+test('teste do teste',()=>{
 
+    let 
+        SimpleF = new SimplestMe(),
+        insidF = (new SimplestMe()).meEat();
+
+});
 

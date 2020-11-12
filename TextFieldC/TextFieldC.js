@@ -15,8 +15,9 @@ function theChange({props,target}){
      console.log(
         document.querySelector('TextFieldC'));
     }catch(e){
-        console.log(
-            document.querySelector('body '));
+        let er= document.createElement('h1');
+        er.innerHTML="Digite algo";
+        document.querySelector('body').appendChild(er);
     }
 }
 

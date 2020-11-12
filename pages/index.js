@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import SimplestMe from '../TextFieldC/SimpleF';
 import TextFieldC from '../TextFieldC/TextFieldC';
 
 export default () => (
@@ -7,6 +8,6 @@ export default () => (
   </div>
       
   <TextFieldC/>
-  
+  <SimplestMe/>
   </div>
 )
