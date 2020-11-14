@@ -23,10 +23,10 @@ it('render with prop',()=>{
     expect(x).toBe(23);
 }) */
 test('teste do teste',()=>{
+    let
+    body = document.createElement('div');
 
-    let 
-        SimpleF = new SimplestMe(),
-        insidF = (new SimplestMe()).meEat();
+    const renL = renderer ( <SimplestMe/>, body);
 
 });
 

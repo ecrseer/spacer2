@@ -1,4 +1,9 @@
 export default function SimplestMe(){
+/* 
+    if(!SimplestMe.instance)
+    SimplestMe.instance = this;
+ */
+
     function meEat(){
         return 'jahEat';
     }
