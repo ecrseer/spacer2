@@ -1,10 +1,10 @@
 # Next.js gh-pages Hello World example
 
-This repository is a gh-pages example built with Next.js
+Criado a partir do
 
 https://thierryc.github.io/Next-gh-page-example/
 
-Install it and run:
+Instalacao:
 
 ```bash
 npm install
