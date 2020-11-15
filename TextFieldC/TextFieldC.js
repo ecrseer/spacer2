@@ -1,27 +1,33 @@
 import {TextField} from '@material-ui/core';
-import { useRef } from 'react';
+import { useRef,forwardRef } from 'react';
 
-function changeBelow(tt){
-
+function changedDiv(tt){
+ return (
+    <h3>{tt}</h3>
+ )
 }
 
 function theChange({props,target}){
     try{
-     let testo=target.value.match(/.{1,1}/g); 
-     testo= testo.join(' ');
-     testo = testo.toUpperCase();
+     let 
+        hhm = document.createElement('h3'),
+        bdy = document.getElementById('__next'),
+        testo = target.value.match(/.{1,1}/g); 
+        
+        testo = testo.join(' ');
+        testo = testo.toUpperCase();
 //    setTimeout(changeBelow(target),1200);
-     console.log(testo);
-     console.log(
-        document.querySelector('TextFieldC'));
-    }catch(e){
-        let er= document.createElement('h1');
-        er.innerHTML="Digite algo";
-        document.querySelector('body').appendChild(er);
+     
+        testo = testo.replaceAll(" ","&nbsp;");
+        hhm.innerHTML = testo;        
+        bdy.appendChild(hhm);
+
+    }catch(err){
+        console.log(err);
     }
 }
 
-export default React.forwardRef(
+export default forwardRef(
 function TextFieldC(props,ref){
 
     const dentroA=()=>{
